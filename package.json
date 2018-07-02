@@ -11,10 +11,7 @@
     "build/lib.map"
   ],
   "scripts": {
-    "test": "yarn start && ava --watch",
-    "test-once": "yarn build && ava",
-    "build": "cross-env NODE_ENV=production backpack build",
-    "start": "nodemon --config \"./nodemon.json\" --exec \"backpack build\""
+    "build": "cross-env NODE_ENV=production backpack build"
   },
   "repository": {
     "type": "git",
