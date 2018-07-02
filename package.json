@@ -5,10 +5,7 @@
   "module": "./src/index.js",
   "main": "./build/index.js",
   "files": [
-    "build/index.js",
-    "build/index.map",
-    "build/lib.js",
-    "build/lib.map"
+    "build"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production backpack build"
