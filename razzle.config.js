@@ -13,7 +13,7 @@ const DotenvPlugin = require('webpack-dotenv-plugin')
 let dotEnvExists = false
 
 try {
-  dotEnvExists = statSync('.env') ? true : false
+  dotEnvExists = !!statSync('.env')
 } catch (error) {
   dotEnvExists = false
 }
@@ -27,21 +27,19 @@ module.exports = {
     { plugins, output, target: targetConfig, node, entry, ...config },
     { target, dev },
     webpack
-  ) => {
-    return {
-      ...config,
-      node:
-        target === 'web'
-          ? {
-              console: false,
-              fs: 'empty',
-              net: 'empty',
-              tls: 'empty',
-            }
-          : node,
-      entry,
-      plugins: [...plugins, ...dotEnv],
-      output,
-    }
-  },
+  ) => ({
+    ...config,
+    node:
+      target === 'web'
+        ? {
+            console: false,
+            fs: 'empty',
+            net: 'empty',
+            tls: 'empty'
+          }
+        : node,
+    entry,
+    plugins: [...plugins, ...dotEnv],
+    output
+  })
 }

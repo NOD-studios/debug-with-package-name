@@ -1,8 +1,8 @@
 /* eslint import/no-commonjs:0, fp/no-mutation:0, fp/no-unused-expression:0, better/explicit-return:0, fp/no-nil:0 */
 
-import { debugInternal, getPackageName, defaultTemplate } from '../build/lib'
-import debugWithPackageName from '../'
 import test from 'ava'
+import { debugInternal, getPackageName, defaultTemplate } from '../build/lib'
+import debugWithPackageName from '..'
 import { name as packageName } from './package.json'
 
 const extraPrefix = 'test'
