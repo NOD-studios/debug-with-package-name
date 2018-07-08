@@ -1,6 +1,6 @@
 // @flow
 import debug from 'debug'
-import { sync } from 'read-pkg-up'
+import { sync as readPkgSync } from 'read-pkg-up'
 import { dirname, join } from 'path'
 import { name as packageName } from '../package.json'
 
@@ -15,6 +15,9 @@ export const defaultTemplate = (
 ): string => debugInternal(join(packagePrefix, extraPrefix), 'defaultTemplate')
 
 export const getPackageName = (dir?: string = process.cwd()): string => {
-  const { pkg: { name } } = sync({ cwd: dir })
-  return module && module.parent ? module.parent : name
+  const pkg = readPkgSync({ cwd: dir })
+  const {
+    pkg: { name }
+  } = pkg
+  return name
 }

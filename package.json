@@ -8,7 +8,8 @@
     "build"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production backpack build"
+    "build": "cross-env NODE_ENV=production backpack build",
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "flow-bin": "^0.66.0",
     "flow-runtime": "^0.16.0",
     "flow-typed": "^2.3.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "react-scripts": "^1.1.4"
   },
   "eslintIgnore": [
     "bin",

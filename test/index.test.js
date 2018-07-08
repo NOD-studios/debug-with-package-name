@@ -11,11 +11,18 @@ import { name as packageName } from './package.json'
 const extraPrefix = 'test'
 const templateString = defaultTemplate(extraPrefix, packageName)
 
-test('getPackageName', () =>
-  expect(packageName).toBe(getPackageName(__dirname)))
+describe('debug-with-package-name', () => {
+  test('getPackageName', () =>
+    expect(packageName).toBe(getPackageName(__dirname)))
 
-test('should prefix properly', t =>
-  debugWithPackageName(extraPrefix, packageName, defaultTemplate, debugName => {
-    debugInternal({ debugName, templateString })
-    return expect(debugName).toBe(templateString)
-  }))
+  test('should prefix properly', () =>
+    debugWithPackageName(
+      extraPrefix,
+      packageName,
+      defaultTemplate,
+      debugName => {
+        debugInternal({ debugName, templateString })
+        return expect(debugName).toBe(templateString)
+      }
+    ))
+})
