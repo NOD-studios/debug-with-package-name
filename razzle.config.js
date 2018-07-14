@@ -5,7 +5,6 @@
   fp/no-let:0
 */
 
-const { tap } = require('ramda')
 const { join } = require('path')
 const { statSync } = require('fs')
 const DotenvPlugin = require('webpack-dotenv-plugin')
@@ -35,11 +34,11 @@ module.exports = {
             console: false,
             fs: 'empty',
             net: 'empty',
-            tls: 'empty'
+            tls: 'empty',
           }
         : node,
     entry,
     plugins: [...plugins, ...dotEnv],
-    output
-  })
+    output,
+  }),
 }

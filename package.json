@@ -32,10 +32,10 @@
     "read-pkg-up": "^3.0.0"
   },
   "devDependencies": {
+    "webpack-dotenv-plugin": "^2.0.2",
     "backpack-core": "^0.7.0",
     "flow-bin": "^0.66.0",
     "flow-runtime": "^0.16.0",
-    "flow-typed": "^2.3.0",
     "nodemon": "^1.12.1",
     "react-scripts": "^1.1.4"
   },

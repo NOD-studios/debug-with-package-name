@@ -17,7 +17,7 @@ export const defaultTemplate = (
 export const getPackageName = (dir?: string = process.cwd()): string => {
   const pkg = readPkgSync({ cwd: dir })
   const {
-    pkg: { name }
+    pkg: { name },
   } = pkg
   return name
 }

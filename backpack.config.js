@@ -9,8 +9,8 @@ const webpack = (config, options, webpack) =>
       ...config,
       entry: {
         index: './src/index.js',
-        lib: './src/lib.js'
-      }
+        lib: './src/lib.js',
+      },
     })
     // reducePluginLeft,
     // web,

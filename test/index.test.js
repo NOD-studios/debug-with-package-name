@@ -4,7 +4,7 @@ import {
   debugWithPackageName,
   debugInternal,
   getPackageName,
-  defaultTemplate
+  defaultTemplate,
 } from '../src'
 import { name as packageName } from './package.json'
 
