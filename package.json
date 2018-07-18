@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production backpack build",
-    "test": "react-scripts test"
+    "start": "nodemon --exec \"yarn build\""
   },
   "repository": {
     "type": "git",
