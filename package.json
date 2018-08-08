@@ -2,14 +2,16 @@
   "name": "@nod/debug-with-package-name",
   "version": "1.4.7-1",
   "description": "Auto prefixes debug module with package name",
-  "main": "./build/main.js",
+  "main": "./build/index.js",
   "module": "./src/index.js",
+  "sideEffects": false,
   "files": [
-    "build"
+    "build",
+    "src"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production backpack build",
-    "start": "nodemon --exec \"yarn build\""
+    "dev": "cross-env NODE_ENV=production backpack dev"
   },
   "repository": {
     "type": "git",
@@ -33,10 +35,9 @@
   },
   "devDependencies": {
     "backpack-core": "^0.7.0",
-    "flow-bin": "^0.66.0",
-    "flow-runtime": "^0.16.0",
-    "nodemon": "^1.12.1",
-    "react-scripts": "^1.1.4",
+    "flow-bin": "^0.78.0",
+    "flow-runtime": "^0.17.0",
+    "flow-typed": "^2.5.1",
     "webpack-dotenv-plugin": "^2.0.2"
   },
   "eslintIgnore": [

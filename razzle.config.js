@@ -34,11 +34,11 @@ module.exports = {
             console: false,
             fs: 'empty',
             net: 'empty',
-            tls: 'empty',
+            tls: 'empty'
           }
         : node,
     entry,
     plugins: [...plugins, ...dotEnv],
-    output,
-  }),
+    output
+  })
 }
