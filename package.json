@@ -1,17 +1,19 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "3.0.1",
+  "version": "3.0.2-0",
   "description": "Auto prefixes debug module with package name",
-  "main": "./build/main.js",
-  "module": "./src/index.js",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
   "sideEffects": false,
   "files": [
+    "src",
     "build",
-    "src"
+    "flow-typed",
+    ".flowconfig"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "start": "cross-env NODE_ENV=development nodemon --exec \"yarn build\""
+    "start": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,7 @@
     "read-pkg-up": "^3.0.0"
   },
   "devDependencies": {
-    "@nod/webpack-devops-config": "^3.0.1",
+    "@nod/webpack-devops-config": "^3.0.2-0",
     "flow-bin": "^0.78.0",
     "flow-runtime": "^0.17.0",
     "flow-typed": "^2.5.1",

@@ -4,8 +4,8 @@ import {
   debugWithPackageName,
   debugInternal,
   getPackageName,
-  defaultTemplate,
-} from '../src'
+  defaultTemplate
+} from '../server'
 import { name as packageName } from './package.json'
 
 const extraPrefix = 'test'
