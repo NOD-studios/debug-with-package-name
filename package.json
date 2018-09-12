@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "3.0.2-0",
+  "version": "4.0.0",
   "description": "Auto prefixes debug module with package name",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -36,7 +36,7 @@
     "read-pkg-up": "^3.0.0"
   },
   "devDependencies": {
-    "@nod/webpack-devops-config": "^3.0.2-0",
+    "@nod/webpack-devops-config": "^4.0.0",
     "flow-bin": "^0.78.0",
     "flow-runtime": "^0.17.0",
     "flow-typed": "^2.5.1",
