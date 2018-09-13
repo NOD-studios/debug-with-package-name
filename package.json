@@ -1,6 +1,6 @@
 {
   "name": "@nod/debug-with-package-name",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Auto prefixes debug module with package name",
   "main": "build/index.js",
   "module": "build/index.esm.js",
