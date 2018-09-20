@@ -1,5 +1,7 @@
 # @nod/debug-with-package-name
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NOD-studios/debug-with-package-name.svg)](https://greenkeeper.io/)
+
 Auto prefixes [debug module](https://www.npmjs.com/package/debug) with package name
 
 ```javascript
