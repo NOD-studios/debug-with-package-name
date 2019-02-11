@@ -2,7 +2,8 @@
 import debug from 'debug'
 import { sync as readPkgSync } from 'read-pkg-up'
 import { join } from 'path'
-import { name as packageName } from '../package.json'
+
+const packageName = '@nod/debug-with-package-name'
 
 export const debugInternal = (
   variable: ?any,
